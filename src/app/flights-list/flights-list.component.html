@@ -48,81 +48,26 @@
 <section>
   
     <div class="container">
-        <div class="flight row">
+        <div class="flight row" *ngFor='let flight of getData'>
             <div class="flightProvider col-md-3">
-                <img src="../../assets/images/indigo-logo.png" class="providerImg" />
-                <div class="flightId">ING-987</div>
+                <img src={{flight.imageUrl}} class="providerImg" />
+                <div class="flightId">{{flight.id}}</div>
             </div>
             <div class="flightTime col-md-5">
                 <div class="dep-arr">
-                    <p>10:40-12:55</p>&nbsp;&nbsp;&nbsp;
-                    <p>BOM-DEL</p>
+                    <p>{{flight.departure}}-{{flight.arrival}}</p>&nbsp;&nbsp;&nbsp;
+                    <p>{{flight.source}}-{{flight.destination}}</p>
                 </div>                    
             </div>
             <div class="flightPrice col-md-1">
-                $236
+                ${{flight.price}}
             </div>
             <div class="flightBookBtn col-md-3">
                 <button class="btn btn-success" onClick="window.location.href='/bookFlight'">Book</button>
             </div>
         </div>
 
-        <div class="flight row">
-            <div class="flightProvider col-md-3">
-                <img src="../../assets/images/indigo-logo.png" class="providerImg" />
-                <div class="flightId">ING-987</div>
-            </div>
-            <div class="flightTime col-md-5">
-                <div class="dep-arr">
-                    <p>10:40-12:55</p>&nbsp;&nbsp;&nbsp;
-                    <p>BOM-DEL</p>
-                </div>                    
-            </div>
-            <div class="flightPrice col-md-1">
-                $236
-            </div>
-            <div class="flightBookBtn col-md-3">
-                <button class="btn btn-success" onClick="window.location.href='/bookFlight'">Book</button>
-            </div>
-        </div>
-
-        <div class="flight row">
-            <div class="flightProvider col-md-3">
-                <img src="../../assets/images/indigo-logo.png" class="providerImg" />
-                <div class="flightId">ING-987</div>
-            </div>
-            <div class="flightTime col-md-5">
-                <div class="dep-arr">
-                    <p>10:40-12:55</p>&nbsp;&nbsp;&nbsp;
-                    <p>BOM-DEL</p>
-                </div>                    
-            </div>
-            <div class="flightPrice col-md-1">
-                $236
-            </div>
-            <div class="flightBookBtn col-md-3">
-                <button class="btn btn-success" onClick="window.location.href='/bookFlight'">Book</button>
-            </div>
-        </div>
-
-        <div class="flight row">
-            <div class="flightProvider col-md-3">
-                <img src="../../assets/images/indigo-logo.png" class="providerImg" />
-                <div class="flightId">ING-987</div>
-            </div>
-            <div class="flightTime col-md-5">
-                <div class="dep-arr">
-                    <p>10:40-12:55</p>&nbsp;&nbsp;&nbsp;
-                    <p>BOM-DEL</p>
-                </div>                    
-            </div>
-            <div class="flightPrice col-md-1">
-                $236
-            </div>
-            <div class="flightBookBtn col-md-3">
-                <button class="btn btn-success" onClick="window.location.href='/bookFlight'">Book</button>
-            </div>
-        </div>
+        
     </div> 
     
     

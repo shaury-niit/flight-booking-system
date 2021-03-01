@@ -1,0 +1,20 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+
+
+.booking form label{
+    margin-bottom: 0;
+}
+
+#proceedBtn{
+    margin-top:15px;
+}
+
+
+.booking form .row{
+    margin-bottom:15px;
+  }
+
+  .booking input{
+    margin-bottom:15px;
+  }
+

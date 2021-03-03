@@ -1,0 +1,25 @@
+<header>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between">    
+        <a class="navbar-brand" href="javascript:void(0)">
+            <img src="../assets/images/logo.png" id="logoImg"><i>EazyBook<span class="dotcom">.com</span></i>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup" *ngIf=(loggedIn)>
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" [routerLink]="['/dashboard']">Dashboard <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" [routerLink]="['/myBookings']">My Bookings</a>
+            <a class="nav-item nav-link" [routerLink]="['/analytics']">Analytics</a>
+            <a class="nav-item nav-link" [routerLink]="['/feedback']">Feedback</a>
+            <span id="logout">Hi, {{name}}
+            <a class="nav-item nav-link" (click)="logout()">Logout</a>
+            </span>
+          </div>
+        </div>
+      </nav>
+  </header>
+
+
+  

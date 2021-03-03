@@ -1,0 +1,76 @@
+<section>
+    <div class="container">
+
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <h3><i>My Bookings</i></h3>
+            </div>
+        </div>
+
+        <div class="row justify-content-center" *ngFor='let flight of bookings'>
+            <div class="col-md-10 flight">
+                <img src="../../../assets/images/cancel.PNG" class="cancelImage" (click)="cancelBooking(flight.id)">
+                <div class="row">
+                    <div class="flightProvider col-md-2">
+                        <img src={{flight.imageUrl}} class="providerImg" />
+                        <div class="flightId">{{flight.flightId}}</div>
+                    </div>
+                    <div class="flightDate col-md-3">
+                        <div class="flightDate">
+                            {{flight.date}}
+                        </div>
+                    </div>
+                    <div class="flightTime col-md-4">
+                        <div class="dep-arr">
+                            <p>{{flight.departure}}<br /><span class="placeName">{{flight.source}}</span></p>
+                            &nbsp;&nbsp;
+                            <span class="dash"></span> &nbsp;&nbsp;
+                            <p>{{flight.arrival}}<br /><span class="placeName">{{flight.destination}}</span></p>
+                        </div>
+                    </div>
+                    <div class="flightPrice col-md-1">
+                        ${{flight.price}}
+
+                    </div>
+                </div>
+                <div class="row passengerCard">
+
+                    <h5 class="col-md-10">
+                        <img src="../../../assets/images/passenger.PNG" id="passengerIcon">Passenger details
+                    </h5>
+
+                </div>
+                <div class="row">
+                    <ol id="passengerList" class="col-md-9">
+                        <li class="passengerDetail" *ngFor='let passenger of flight.passengers'>
+                            <div class="row ">
+                                <div class="col-md-3 col-12">
+                                    {{passenger.firstName}}
+                                </div>
+
+                                <div class="col-md-3 col-12">
+
+                                    {{passenger.lastName}}
+                                </div>
+                                <div class="col-md-3 col-12">
+                                    {{passenger.dob}}
+                                </div>
+                                <div class="col-md-3 col-12">
+                                    {{passenger.contact}}
+                                </div>
+                            </div>
+                        </li>
+                    </ol>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center" id="noData" *ngIf="nodata">
+            <div class="col-md-10 card">
+                <p class="text-center"><i>No bookings to show!</i></p>
+                </div>
+        </div>
+
+    </div>
+</section>

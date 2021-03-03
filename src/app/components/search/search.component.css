@@ -1,0 +1,100 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+
+.search form label{
+    margin-bottom: 0;
+}
+
+#searchBtn{
+    margin-top:15px;
+}
+
+.search input{
+    margin-bottom:15px;
+  }
+
+.search form .row{
+    margin-bottom:15px;
+  }
+
+
+  
+.booking form label{
+  margin-bottom: 0;
+}
+
+#proceedBtn{
+  margin-top:15px;
+}
+
+
+.booking form .row{
+  margin-bottom:15px;
+}
+
+.booking input{
+  margin-bottom:15px;
+}
+
+.providerImg{
+  width:50px;
+  height:50px;
+}
+
+.flight{
+box-shadow: 0px 0px 10px #9d99be !important;
+background-color: #ffffff;
+margin-top:25px;
+padding:25px;
+}
+
+.dep-arr, .flightPrice{
+font-size:20px;
+
+}
+
+.flightBookBtn {
+text-align: center;
+}
+
+.flight div{
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.flightId{
+padding-left:15px;
+}
+
+.flightBookBtn button{
+padding: 10px 35px !important;
+}
+
+.dep-arr p{
+padding:15px;
+margin-bottom: 0;
+line-height: 16px;
+text-align: center;
+}
+
+.placeName{
+font-size: 14px;
+}
+
+.dash{
+width: 60px;
+border-top: 3px solid rgb(81, 226, 194);
+}
+
+.flight:hover{
+box-shadow: 0px 0px 20px #9d99be !important;
+}
+
+@media screen and (min-width:768px){    
+/* 
+header i{
+  font-size:32px;
+  font-weight: bold;
+} */
+
+}

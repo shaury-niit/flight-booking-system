@@ -1,0 +1,7 @@
+input[type=checkbox]{
+    height:auto !important;
+}
+
+.card{
+    padding: 0!important;
+}

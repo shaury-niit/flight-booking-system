@@ -1,3 +1,8 @@
+@import 'primeicons/primeicons.css';
+@import 'primeng/resources/themes/saga-blue/theme.css';
+@import 'primeng/resources/primeng.min.css';
+
+@import "~bootstrap/dist/css/bootstrap.css";
 
 @font-face{
     font-family: Cairo;
@@ -8,7 +13,7 @@
     font-family:Cairo !important;
     background-color: white;
     background-image: linear-gradient(to top right, #005aff54, white);   
-  
+    min-height: 100vh;
   }
 
   @keyframes logoAnimation {
@@ -42,7 +47,7 @@ footer{
     height:50px;
   }
 
-  header{
+  /* header{
     padding:15px;
     display: flex;
     align-items: center;
@@ -59,7 +64,7 @@ footer{
     font-weight: bold;
     padding-left: 15px;
       margin: 0;
-   }
+   } */
   
 
   .nav-item.active{
@@ -78,13 +83,13 @@ footer{
   }
 
   .card-head{
-    text-align:center;
-    margin-bottom:20px;  
+    text-align:left;
+    /* margin-bottom:20px;   */
     padding-top:5px;
   }
 
   section{
-    margin-top:50px;
+    margin-top:20px;
     margin-bottom:150px;
   }
 
@@ -113,9 +118,9 @@ footer{
 
   @media screen and (min-width:768px){
   
-    header i{
+    /* header i{
       font-size:32px;
       font-weight: bold;
-    }
+    } */
   }
     

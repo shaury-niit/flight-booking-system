@@ -1,0 +1,18 @@
+#logoImg{
+    margin-right:25px;
+}
+
+.dotcom{
+    font-size: 12px;
+}
+
+#logout{
+    line-height: 7px;
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgb(16 123 232);
+}

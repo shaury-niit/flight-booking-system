@@ -19,6 +19,7 @@ import { AnalyticsComponent } from './components/analytics/analytics.component';
 import { BookingConfirmationComponent } from './components/booking-confirmation/booking-confirmation.component';
 import { MyBookingsComponent } from './components/my-bookings/my-bookings.component';
 import { HeaderComponent } from './components/header/header.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -44,7 +45,8 @@ import { HeaderComponent } from './components/header/header.component';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ChartModule
+    ChartModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

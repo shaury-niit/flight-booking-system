@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {BookingServiceService} from '../../services/bookingService/booking-service.service'
 
+
 @Component({
   selector: 'app-my-bookings',
   templateUrl: './my-bookings.component.html',
@@ -16,6 +17,10 @@ export class MyBookingsComponent implements OnInit {
 
   nodata:boolean=false
 
+  confirmModal:boolean=false
+
+  deleteId:any
+
   getAllBookings(user:any){
     this._httpService.getBooking(user).subscribe((res) => {      
       this.bookings = res;  
@@ -30,10 +35,20 @@ export class MyBookingsComponent implements OnInit {
     this.getAllBookings(this.username)
   }
 
-  cancelBooking(id:any){    
-    this._httpService.deleteBooking(id).subscribe((res) => {
+  closeModal(){
+    this.confirmModal= false
+  }
+
+  confirmCancel(){
+    this._httpService.deleteBooking(this.deleteId).subscribe((res) => {
       this.getAllBookings(this.username)
     });
+    this.confirmModal= false
+  }
+
+  cancelBooking(id:any){ 
+    this.confirmModal= true  
+    this.deleteId = id;         
   }
 
 }

@@ -15,6 +15,7 @@ export class SearchComponent implements OnInit {
   to:string=""
   searchDate:any
   getData: any;
+  noFlights:boolean=false
 
   constructor(private _httpService: FlightsServiceService, private router:Router, private route: ActivatedRoute) { }
 
@@ -27,7 +28,11 @@ export class SearchComponent implements OnInit {
     this._httpService.getFlightsList(this.from, this.to).subscribe((res) => {
       console.log(res);
       this.getData = res;
-      // this.router.navigate(['/bookFlight']);
+      if(!this.getData.length){
+        this.noFlights=true
+      }else{
+        this.noFlights=false
+      }
     });
   }
 

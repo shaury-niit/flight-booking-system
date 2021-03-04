@@ -22,6 +22,7 @@ export class LoginComponent implements OnInit {
     
   }
 
+
   loginCall() {
     this._httpService.getUserData(this.username).subscribe((res) => {
       // console.log(res);

@@ -9,12 +9,13 @@
     src:url('./assets/fonts/Cairo-Regular.ttf')
   }
   
-  body{
+  body,html{
     font-family:Cairo !important;
     background-color: white;
     background-image: linear-gradient(to top right, #005aff54, white);   
-    min-height: 100vh;
+    min-height:100%
   }
+
 
   @keyframes logoAnimation {
     100% {transform: rotate(360deg)}
@@ -90,7 +91,8 @@ footer{
 
   section{
     margin-top:20px;
-    margin-bottom:150px;
+    /* margin-bottom:80px; */
+    min-height: 100vh;
   }
 
   input, select, textarea{
@@ -116,11 +118,10 @@ footer{
       padding: 12px 22px !important;
   }
 
-  @media screen and (min-width:768px){
+  @media screen and (max-width:768px){
   
-    /* header i{
-      font-size:32px;
-      font-weight: bold;
-    } */
+    .container{
+      padding: 0 50px;
+    }
   }
     

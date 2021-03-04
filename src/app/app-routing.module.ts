@@ -12,7 +12,7 @@ import { BookingConfirmationComponent } from './components/booking-confirmation/
 import {MyBookingsComponent} from './components/my-bookings/my-bookings.component'
 
 const routes: Routes = [
-  {path: '', component: LoginComponent},
+  {path: 'login', component: LoginComponent},
   {path: 'dashboard', component: DashboardComponent},
   {path: 'flightsList', component: FlightsListComponent,
   children: [
@@ -26,6 +26,7 @@ const routes: Routes = [
   {path: 'bookingConfirmation', component: BookingConfirmationComponent},
   {path: 'myBookings', component: MyBookingsComponent},
   {path: 'feedback', loadChildren: () => import('./feedback-module/feedback-module.module').then(m => m.FeedbackModuleModule)}​​​​​,
+  {path: '**', redirectTo:'/login'},
 ];
 
 @NgModule({

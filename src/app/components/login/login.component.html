@@ -3,7 +3,7 @@
     <div id="loginRegister" class="row justify-content-center">
 
         <div class="card">
-            <form ngForm id="login">
+            <form ngForm id="login" ngNativeValidate>
                 <div class="card-head">
                     <h3 >
                         <i>Sign In</i>
@@ -40,7 +40,7 @@
 
                 <div class="row">
                     <p class="align-center width100">
-                        <button name="loginSubmit" id="loginSubmit" class="btn-primary" (click)="loginCall()" >
+                        <button type="submit" name="loginSubmit" id="loginSubmit" class="btn-primary" (click)="loginCall()" >
                             Sign In
                         </button>
                     </p>
